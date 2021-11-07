@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+:root {
+  --blue-color: #4a6ee0;
+  --green-color: #41d9b5;
+  --dark-color: #333;
+  --nav-text-color: white;
+  --footer-bg: #f5f5f7;
+  --nav-gradient: linear-gradient(
+    to left,
+    var(--blue-color),
+    var(--green-color)
+  );
+  --brand-size: 2rem;
+  --nav-height: 3rem;
+  --footer-height: 10rem;
+  --nav-padding: 1rem;
+}
+
+nav.top {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: var(--nav-height);
+  align-items: center;
+  justify-content: space-between;
+  color: var(--nav-text-color);
+  padding: var(--nav-padding);
+  background-image: var(--nav-gradient);
+}
+nav.top ul {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  display: flex;
+  list-style: none;
+}
+nav.top a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav.top a:hover {
+  text-decoration: var(--green-color) wavy underline;
+}
+nav.top span {
+  font-size: var(--brand-size);
+}
+
+main {
+  padding: var(--nav-padding);
+}
+
+.inline-content {
+  display: flex;
+}
+.text {
+  padding: 0.5rem;
+}
+
+.date {
+  display: block;
+  text-align: right;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: var(--nav-padding);
+  height: var(--footer-height);
+  background-color: var(--footer-bg);
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+footer li {
+  margin: 0 0.5rem;
+}
+footer a {
+  font-size: var(--brand-size);
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  border-radius: 1rem;
+  width: 50vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-image: var(--nav-gradient);
+  display: none;
+}
+
+.modal * {
+  color: white;
+}
+.modal i {
+  font-size: var(--brand-size);
+}
